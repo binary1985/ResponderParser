@@ -11,9 +11,9 @@ if len(sys.argv) < 3:
 with open(sys.argv[1]) as f:
         for line in f:
                 if 'complete hash' in line:
-# re.search("complete hash", line):
                         if line.split(":")[3] not in users:
                                 users[line.split(":")[3]] = line
+
 userfile=open(sys.argv[2],"w")
 for value in users.values():
         if '$' not in value:
